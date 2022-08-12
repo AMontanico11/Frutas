@@ -1,0 +1,66 @@
+:root {
+    --w: calc(70vw / 5);
+    --h: calc(70vh / 4);
+}
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    padding: 20;
+    margin: 0; 
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div {
+    display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    cursor: pointer;
+    width: var(--w);
+    min-width: 100px;
+    height: var(--h);
+    margin: 3px;
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: iniciar 5s;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    font-size: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera {
+    background-color:  gray;
+    transform: rotateY(180deg);
+}
+.superior {
+background-color: black;
+}
+
+.bton1 {
+    cursor: pointer;
+    background-color:crimson;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 100%;
+    color: white;
+}
